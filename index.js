@@ -1,5 +1,4 @@
 window.addEventListener('load', () => {
-  document.getElementById('signin').style.display = "block";
   document.getElementById('signout').style.display = "none";
   document.getElementById('title').innerText = "Sign in";
 })
@@ -7,10 +6,10 @@ window.addEventListener('load', () => {
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
-  document.getElementsByClassName('g-signin2').style.display = "none";
-  document.getElementById('signout').style.display = "block";
+  // document.getElementsByClassName('g-signin2').style.display = "none";
+  // document.getElementById('signout').style.display = "block";
   document.getElementById("name").innerText = profile.getName();
-  document.getElementById('signout').addEventListener("click", signOut);
+  // document.getElementById('signout').addEventListener("click", signOut);
   document.getElementById('title').innerText = `Hello ${profile.getName()}`;
   // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
   // console.log('Name: ' + profile.getName());
@@ -25,7 +24,7 @@ function signOut() {
     console.log('User signed out.');
     alert('User signed out.');
   });
-  document.getElementById('signout').style.display = "none";
-  document.getElementById('signout').removeEventListener("click", signOut);
-  document.getElementsByClassName('g-signin2').style.display = "block";
+  // document.getElementById('signout').style.display = "none";
+  // document.getElementById('signout').removeEventListener("click", signOut);
+  // document.getElementsByClassName('g-signin2').style.display = "block";
 }
