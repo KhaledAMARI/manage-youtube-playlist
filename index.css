@@ -1,0 +1,9 @@
+#signout {
+  display: none;
+}
+
+.sign-in-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
