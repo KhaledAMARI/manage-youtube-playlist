@@ -1,3 +1,10 @@
+window.addEventListener('load', () => {
+  document.getElementsByClassName('g-signin2').style.display = "none";
+  document.getElementById('signout').style.display = "block";
+  document.getElementsByTagName('h1').innerText = "Sign in";
+  document.getElementsByClassName('g-signin2').addEventListener('click', onSignIn);
+})
+
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
@@ -20,5 +27,6 @@ function signOut() {
   });
   document.getElementById('signout').style.display = "none";
   document.getElementById('signout').removeEventListener("click", signOut);
+  document.getElementsByClassName('g-signin2').removeEventListener('click', onSignIn);
   document.getElementsByClassName('g-signin2').style.display = "block";
 }
