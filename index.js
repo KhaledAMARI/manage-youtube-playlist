@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
-  document.getElementsByClassName('g-signin2').style.display = "none";
-  document.getElementById('signout').style.display = "block";
+  document.getElementById('signin').style.display = "block";
+  document.getElementById('signout').style.display = "none";
   document.getElementById('title').innerText = "Sign in";
 })
 
